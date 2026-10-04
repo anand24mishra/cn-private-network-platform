@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Date: Sun, 04 Oct 2026 17:07:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}
