@@ -1,0 +1,68 @@
+PHASE 1 — TASK A
+PRIVATE LAN CONNECTIVITY TEST
+
+Network: 10.253.140.0/24
+Gateway: 10.253.140.177
+
+ANAND -> RAJAT
+Target: 10.253.140.169
+Result: PASS
+Packet loss: 0.0%
+
+ANAND -> RAJDEEP
+Target: 10.253.140.203
+Result: PASS
+Packet loss: 0.0%
+
+ANAND -> OMVED
+Target: 10.253.140.1
+Result: PASS
+Packet loss: 0.0%
+
+RAJAT -> ANAND
+Target: 10.253.140.31
+Result: PASS
+Packet loss: 0.0%
+
+RAJAT -> RAJDEEP
+Target: 10.253.140.203
+Result: PASS
+Packet loss: 0.0%
+
+RAJAT -> OMVED
+Target: 10.253.140.1
+Result: PASS
+Packet loss: 0.0%
+
+RAJDEEP -> ANAND
+Target: 10.253.140.31
+Result: PASS
+Packet loss: 0.0%
+
+RAJDEEP -> RAJAT
+Target: 10.253.140.169
+Result: PASS
+Packet loss: 0.0%
+
+RAJDEEP -> OMVED
+Target: 10.253.140.1
+Result: PASS
+Packet loss: 0.0%
+
+OMVED -> ANAND
+Target: 10.253.140.31
+Result: PASS
+Packet loss: 0.0%
+
+OMVED -> RAJAT
+Target: 10.253.140.169
+Result: PASS
+Packet loss: 0.0%
+
+OMVED -> RAJDEEP
+Target: 10.253.140.203
+Result: PASS
+Packet loss: 0.0%
+
+OVERALL RESULT: PASS
+All four machines are reachable across the private LAN.
