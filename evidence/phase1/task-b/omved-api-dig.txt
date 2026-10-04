@@ -2,7 +2,6 @@
 ; <<>> DiG 9.10.6 <<>> api.team1.test
 ;; global options: +cmd
 ;; Got answer:
-<<<<<<< HEAD
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23120
 ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
@@ -18,16 +17,4 @@ api.team1.test.		30	IN	A	10.253.140.31
 ;; SERVER: 10.253.140.169#53(10.253.140.169)
 ;; WHEN: Sun Oct 04 22:04:14 IST 2026
 ;; MSG SIZE  rcvd: 59
-=======
-;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 51977
-;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
-
-;; QUESTION SECTION:
-;api.team1.test.			IN	A
-
-;; Query time: 6 msec
-;; SERVER: 2409:40d6:1152:7a20::c2#53(2409:40d6:1152:7a20::c2)
-;; WHEN: Sun Oct 04 22:12:42 IST 2026
-;; MSG SIZE  rcvd: 32
->>>>>>> 4891bc5 (feat: complete phase 1 private DNS)
 

@@ -1,8 +1,11 @@
+COMMAND:
+dig app.team1.test
 
+OUTPUT:
 ; <<>> DiG 9.10.6 <<>> app.team1.test
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17443
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39765
 ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
 ;; OPT PSEUDOSECTION:
@@ -13,8 +16,7 @@
 ;; ANSWER SECTION:
 app.team1.test.		30	IN	A	10.253.140.31
 
-;; Query time: 21 msec
+;; Query time: 192 msec
 ;; SERVER: 10.253.140.169#53(10.253.140.169)
-;; WHEN: Sun Oct 04 22:04:14 IST 2026
+;; WHEN: Mon Oct 05 01:55:23 IST 2026
 ;; MSG SIZE  rcvd: 59
-

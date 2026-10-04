@@ -1,0 +1,139 @@
+FAILURE DEMONSTRATION — Option C: Wrong Port (Transport Layer Failure)
+
+This demonstrates a transport-layer failure by attempting to connect to a
+port where no service is listening (port 9999 instead of port 8443).
+
+Affected Layer: Transport (TCP)
+
+The correct nginx HTTPS endpoint runs on port 8443. Port 9999 has no
+listener, so the TCP connection is immediately refused by the OS kernel.
+No TLS handshake or HTTP exchange occurs.
+
+================================================================================
+STEP 1 — BEFORE (service working normally on port 8443)
+================================================================================
+
+COMMAND:
+curl -v --max-time 120 https://app.team1.test:8443/api/status
+
+OUTPUT:
+* Host app.team1.test:8443 was resolved.
+* IPv6: (none)
+* IPv4: 10.253.140.31
+*   Trying 10.253.140.31:8443...
+* Connected to app.team1.test (10.253.140.31) port 8443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=app.team1.test
+*  start date: Oct  4 17:16:41 2026 GMT
+*  expire date: Jan  6 17:16:41 2029 GMT
+*  subjectAltName: host "app.team1.test" matched cert's "app.team1.test"
+*  issuer: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=Team1 Local CA
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET /api/status HTTP/1.1
+> Host: app.team1.test:8443
+> User-Agent: curl/8.7.1
+> Accept: */*
+>
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.31.6
+< Date: Sun, 04 Oct 2026 20:26:13 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< X-Backend: B
+< Cache-Control: public, max-age=60
+<
+* Connection #0 to host app.team1.test left intact
+{"backend":"B","status":"ok"}
+
+================================================================================
+STEP 2 — FAILURE (connecting to wrong port 9999)
+================================================================================
+
+COMMAND:
+curl -v --max-time 10 https://app.team1.test:9999/api/status
+
+OUTPUT:
+* Host app.team1.test:9999 was resolved.
+* IPv6: (none)
+* IPv4: 10.253.140.31
+*   Trying 10.253.140.31:9999...
+* connect to 10.253.140.31 port 9999 from 10.253.140.31 port 60565 failed: Connection refused
+* Failed to connect to app.team1.test port 9999 after 29 ms: Couldn't connect to server
+* Closing connection
+curl: (7) Failed to connect to app.team1.test port 9999 after 29 ms: Couldn't connect to server
+
+ANALYSIS:
+The TCP SYN to port 9999 is immediately rejected with a RST because no
+process is listening on that port. The failure occurs at the transport
+layer — before any TLS or HTTP exchange can begin.
+
+================================================================================
+STEP 3 — RESTORATION (back to correct port 8443)
+================================================================================
+
+COMMAND:
+curl -v --max-time 120 https://app.team1.test:8443/api/status
+
+OUTPUT:
+* Host app.team1.test:8443 was resolved.
+* IPv6: (none)
+* IPv4: 10.253.140.31
+*   Trying 10.253.140.31:8443...
+* Connected to app.team1.test (10.253.140.31) port 8443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=app.team1.test
+*  start date: Oct  4 17:16:41 2026 GMT
+*  expire date: Jan  6 17:16:41 2029 GMT
+*  subjectAltName: host "app.team1.test" matched cert's "app.team1.test"
+*  issuer: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=Team1 Local CA
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET /api/status HTTP/1.1
+> Host: app.team1.test:8443
+> User-Agent: curl/8.7.1
+> Accept: */*
+>
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.31.6
+< Date: Sun, 04 Oct 2026 20:28:17 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< X-Backend: B
+< Cache-Control: public, max-age=60
+<
+* Connection #0 to host app.team1.test left intact
+{"backend":"B","status":"ok"}
+
+CONCLUSION:
+Switching back to the correct port 8443 immediately restores full
+HTTPS service. The failure was entirely at the transport layer — the
+application, TLS, and DNS layers were unaffected throughout.

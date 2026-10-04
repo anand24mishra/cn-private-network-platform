@@ -1,0 +1,19 @@
+COMMAND:
+curl -sI https://app.team1.test:8443/api/status
+
+OUTPUT:
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 04 Oct 2026 20:27:21 GMT
+Content-Type: application/json
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+EXPLANATION:
+The /api/status endpoint returns Cache-Control: public, max-age=60.
+This instructs clients and intermediate caches that the response may be
+stored in any cache and is considered fresh for 60 seconds.
+
+The /api/cache endpoint additionally returns an ETag header for
+conditional request support (see cache-200.txt and cache-304.txt).

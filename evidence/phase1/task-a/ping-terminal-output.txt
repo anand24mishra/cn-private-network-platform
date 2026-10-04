@@ -1,0 +1,64 @@
+PHASE 1 — PING CONNECTIVITY TEST
+From: Anand (10.253.140.31, nginx Edge)
+Date: Mon Oct 05 01:59 IST 2026
+
+================================================================================
+ANAND -> RAJAT (Private DNS, 10.253.140.169)
+================================================================================
+
+COMMAND:
+ping -c 3 10.253.140.169
+
+OUTPUT:
+PING 10.253.140.169 (10.253.140.169): 56 data bytes
+64 bytes from 10.253.140.169: icmp_seq=0 ttl=64 time=116.140 ms
+64 bytes from 10.253.140.169: icmp_seq=1 ttl=64 time=97.525 ms
+64 bytes from 10.253.140.169: icmp_seq=2 ttl=64 time=193.102 ms
+
+--- 10.253.140.169 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 97.525/135.589/193.102/41.372 ms
+
+================================================================================
+ANAND -> RAJDEEP (Backend A, 10.253.140.203)
+================================================================================
+
+COMMAND:
+ping -c 3 10.253.140.203
+
+OUTPUT:
+PING 10.253.140.203 (10.253.140.203): 56 data bytes
+Request timeout for icmp_seq 0
+64 bytes from 10.253.140.203: icmp_seq=0 ttl=64 time=1049.094 ms
+64 bytes from 10.253.140.203: icmp_seq=1 ttl=64 time=44.018 ms
+64 bytes from 10.253.140.203: icmp_seq=2 ttl=64 time=40.515 ms
+
+--- 10.253.140.203 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 40.515/377.876/1049.094/474.625 ms
+
+================================================================================
+ANAND -> OMVED (Backend B, 10.253.140.1)
+================================================================================
+
+COMMAND:
+ping -c 3 10.253.140.1
+
+OUTPUT:
+PING 10.253.140.1 (10.253.140.1): 56 data bytes
+64 bytes from 10.253.140.1: icmp_seq=0 ttl=64 time=192.180 ms
+64 bytes from 10.253.140.1: icmp_seq=1 ttl=64 time=225.600 ms
+64 bytes from 10.253.140.1: icmp_seq=2 ttl=64 time=241.960 ms
+
+--- 10.253.140.1 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 192.180/219.913/241.960/20.717 ms
+
+================================================================================
+SUMMARY
+================================================================================
+All three peers reachable from Anand's machine. 0% packet loss on all paths.
+
+Note: Reverse direction pings (from Rajat/Rajdeep/Omved to Anand and to each
+other) were captured during the original lab session — see ping-tests.txt for
+the summary of all 12 pairwise tests, all with 0% packet loss.
