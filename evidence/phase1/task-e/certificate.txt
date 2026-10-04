@@ -1,0 +1,4 @@
+subject=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=app.team1.test
+issuer=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=Team1 Local CA
+notBefore=Oct  4 17:16:41 2026 GMT
+notAfter=Jan  6 17:16:41 2029 GMT

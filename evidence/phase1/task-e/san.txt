@@ -1,0 +1,2 @@
+X509v3 Subject Alternative Name: 
+    DNS:app.team1.test, DNS:api.team1.test, IP Address:10.253.140.31
