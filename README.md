@@ -55,7 +55,7 @@ All Phase 1 evidence is stored under:
 - **Rajat** ran primary DNS and coordinated integration and restoration. **Omved** ran backup DNS at `10.7.26.0:53` and Backend B. **Anand** ran the main edge and TTL cache client. **Rajdeep** ran Backend A and standby nginx at `10.7.12.140:8443`.
 - The [final report](docs/phase2-final-report.md) covers DNS failover, isolated TTL and caching, PF isolation, backend availability, standby edge migration, and troubleshooting.
 - The [evidence index](evidence/phase2/README.md) links evidence by experiment and producer. Phase 1 evidence remains in [evidence/phase1](evidence/phase1/).
-- Two DNS resolvers improve recovery when the client uses both. DNS cutover still depends on cache expiry and client resolver behavior. Omved’s owner-side artifacts are pending a privacy-safe PR revision.
+- Two DNS resolvers improve recovery when the client uses both. DNS cutover still depends on cache expiry and client resolver behavior. Omved’s [backup DNS, Backend B, and PF rollback evidence](evidence/phase2/teammates/omved/README.md) is included.
 
 On the project LAN, use these read-only checks from the repository root:
 
