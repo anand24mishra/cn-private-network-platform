@@ -1,0 +1,27 @@
+Sun Nov 22 21:38:48 IST 2026
+main
+ M config/nginx/nginx.conf
+?? config/dnsmasq/cache-client.conf
+?? docs/anand-phase2-report.md
+?? docs/anand-phase2.md
+?? evidence/phase2/
+unmerged:
+/Users/anandmishra1/cn-private-network-platform
+10.7.2.253
+DHCP Configuration
+IP address: 10.7.2.253
+Subnet mask: 255.255.224.0
+Router: 10.7.0.1
+Client ID: 
+IPv6: Automatic
+IPv6 IP address: none
+IPv6 Router: none
+Wi-Fi ID: 10:9f:41:bc:d8:09
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 91.812/106.405/120.999/14.594 ms
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.215/0.226/0.237/0.011 ms
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 34.014/51.609/69.203/17.594 ms
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 33.430/42.153/50.875/8.722 ms

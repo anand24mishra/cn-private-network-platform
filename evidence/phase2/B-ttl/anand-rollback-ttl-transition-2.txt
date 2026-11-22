@@ -1,0 +1,455 @@
+=== SAMPLE 1 00:21:10 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 2 00:21:12 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		28	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 3 00:21:14 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		26	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 4 00:21:16 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 5 00:21:19 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		21	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 6 00:21:21 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		19	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 7 00:21:23 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		17	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 8 00:21:25 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		15	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 9 00:21:27 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		12	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 10 00:21:30 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		10	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 11 00:21:32 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		8	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 12 00:21:34 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		6	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 13 00:21:36 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		3	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 14 00:21:39 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		1	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 15 00:21:41 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 16 00:21:43 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		28	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 17 00:21:45 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		26	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 18 00:21:47 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 19 00:21:50 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		21	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 20 00:21:52 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		19	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 21 00:21:54 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		17	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 22 00:21:56 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		15	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 23 00:21:58 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		13	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 24 00:22:00 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		11	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 25 00:22:02 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		9	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 26 00:22:04 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		7	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 27 00:22:06 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		5	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 28 00:22:09 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		2	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 29 00:22:11 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 30 00:22:13 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		28	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 31 00:22:15 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		26	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 32 00:22:17 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 33 00:22:19 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		22	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 34 00:22:21 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		20	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== SAMPLE 35 00:22:23 ===
+CACHE:
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		18	IN	A	10.7.12.140
+PRIMARY:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140

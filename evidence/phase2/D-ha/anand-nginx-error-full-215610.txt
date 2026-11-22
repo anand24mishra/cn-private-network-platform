@@ -1,0 +1,18 @@
+# Source: /tmp/cn-nginx-error.log full copy, extracted Sun Nov 22 21:56:10 IST 2026
+2026/11/22 20:54:15 [notice] 82511#0: using the "kqueue" event method
+2026/11/22 20:54:15 [notice] 82511#0: nginx/1.31.6
+2026/11/22 20:54:15 [notice] 82511#0: built by clang 21.0.0 (clang-2100.3.34.2)
+2026/11/22 20:54:15 [notice] 82511#0: OS: Darwin 27.2.0
+2026/11/22 20:54:15 [notice] 82511#0: hw.ncpu: 8
+2026/11/22 20:54:15 [notice] 82511#0: net.inet.tcp.sendspace: 131072
+2026/11/22 20:54:15 [notice] 82511#0: kern.ipc.somaxconn: 128
+2026/11/22 20:54:15 [notice] 82511#0: hw.cachelinesize: 128
+2026/11/22 20:54:15 [notice] 82511#0: getrlimit(RLIMIT_NOFILE): 1048576:9223372036854775807
+2026/11/22 20:54:15 [notice] 82512#0: start worker processes
+2026/11/22 20:54:15 [notice] 82512#0: start worker process 82514
+2026/11/22 20:56:24 [error] 82514#0: *3 kevent() reported that connect() failed (61: Connection refused) while connecting to upstream, client: 10.7.2.253, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.12.140:3001/api/status", host: "app.team1.test:8443"
+2026/11/22 20:56:24 [warn] 82514#0: *3 upstream server temporarily disabled while connecting to upstream, client: 10.7.2.253, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.12.140:3001/api/status", host: "app.team1.test:8443"
+2026/11/22 20:56:25 [error] 82514#0: *3 kevent() reported that connect() failed (61: Connection refused) while connecting to upstream, client: 10.7.2.253, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.26.0:3002/api/status", host: "app.team1.test:8443"
+2026/11/22 20:56:25 [warn] 82514#0: *3 upstream server temporarily disabled while connecting to upstream, client: 10.7.2.253, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.26.0:3002/api/status", host: "app.team1.test:8443"
+2026/11/22 21:49:23 [error] 82514#0: *64 kevent() reported that connect() failed (61: Connection refused) while connecting to upstream, client: 10.7.10.96, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.12.140:3001/api/status", host: "app.team1.test:8443"
+2026/11/22 21:49:23 [warn] 82514#0: *64 upstream server temporarily disabled while connecting to upstream, client: 10.7.10.96, server: app.team1.test, request: "GET /api/status HTTP/1.1", upstream: "http://10.7.12.140:3001/api/status", host: "app.team1.test:8443"

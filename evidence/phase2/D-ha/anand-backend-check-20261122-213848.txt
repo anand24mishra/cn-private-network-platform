@@ -1,0 +1,21 @@
+Sun Nov 22 21:38:54 IST 2026
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 16:08:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}rc A=0
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 16:08:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}

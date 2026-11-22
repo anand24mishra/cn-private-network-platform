@@ -1,0 +1,13 @@
+Sun Nov 22 21:38:53 IST 2026
+-rw-r--r--@ 1 anandmishra1  staff  2009 Oct  4 22:46 config/tls/team1-ca.crt
+-rw-r--r--@ 1 anandmishra1  staff  1769 Oct  4 22:46 config/tls/team1-server.crt
+Server private key exists (contents not shown)
+cert-pubkey:
+129497893263671d61e3a5a5fa6d8ed80ca1637dcb09a974d35d7f1c156211eb  -
+key-pubkey:
+129497893263671d61e3a5a5fa6d8ed80ca1637dcb09a974d35d7f1c156211eb  -
+nginx: the configuration file /Users/anandmishra1/cn-private-network-platform/config/nginx/nginx.conf syntax is ok
+nginx: configuration file /Users/anandmishra1/cn-private-network-platform/config/nginx/nginx.conf test is successful
+COMMAND   PID         USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+nginx   82512 anandmishra1    6u  IPv4 0x49a1a190044730d7      0t0  TCP 10.7.2.253:8443 (LISTEN)
+nginx   82514 anandmishra1    6u  IPv4 0x49a1a190044730d7      0t0  TCP 10.7.2.253:8443 (LISTEN)

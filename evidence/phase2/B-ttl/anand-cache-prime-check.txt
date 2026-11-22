@@ -1,0 +1,16 @@
+Sun Nov 22 23:37:28 IST 2026
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		27	IN	A	10.7.2.253
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.2.253

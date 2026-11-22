@@ -1,0 +1,96 @@
+23:58:56
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+23:58:59
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		27	IN	A	10.7.2.253
+23:59:02
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.2.253
+23:59:05
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		21	IN	A	10.7.2.253
+23:59:08
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		18	IN	A	10.7.2.253
+23:59:11
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		15	IN	A	10.7.2.253
+23:59:14
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		12	IN	A	10.7.2.253
+23:59:18
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		8	IN	A	10.7.2.253
+23:59:21
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		5	IN	A	10.7.2.253
+23:59:24
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		2	IN	A	10.7.2.253
+23:59:27
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+23:59:30
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		27	IN	A	10.7.2.253
+23:59:33
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.2.253
+23:59:36
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		21	IN	A	10.7.2.253
+23:59:39
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		18	IN	A	10.7.2.253
+23:59:42
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		15	IN	A	10.7.2.253
