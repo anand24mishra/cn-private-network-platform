@@ -1,0 +1,12 @@
+# 2026-11-23 00:33:29 IST
+$ cat rajdeep-pf-candidate.pf
+pass in quick on en0 proto tcp from 10.7.2.253 to 10.7.12.140 port 3001 keep state
+block drop in quick on en0 proto tcp from any to 10.7.12.140 port 3001
+$ sudo pfctl -vnf evidence/phase2/C-isolation/rajdeep-pf-candidate.pf
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+pass in quick on en0 inet proto tcp from 10.7.2.253 to 10.7.12.140 port = 3001 flags S/SA keep state
+block drop in quick on en0 inet proto tcp from any to 10.7.12.140 port = 3001
+syntax_exit=0

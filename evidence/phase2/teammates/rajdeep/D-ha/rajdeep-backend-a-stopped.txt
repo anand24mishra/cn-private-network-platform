@@ -1,0 +1,18 @@
+# Test 1 / Extension D — stop Backend A — 2026-11-22 21:49:02 IST
+$ lsof -nP -iTCP:3001 -sTCP:LISTEN
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    65675 rajdeep   15u  IPv4 0xc455927018858da9      0t0  TCP *:3001 (LISTEN)
+$ ps -o pid,command -p 65675
+  PID COMMAND
+65675 node backend/server.js
+$ kill -TERM 65675
+[exit 0]
+$ lsof -nP -iTCP:3001 -sTCP:LISTEN
+nothing listening on 3001
+$ curl --noproxy "*" -sS -i --max-time 3 http://10.7.12.140:3001/api/status
+curl: (7) Failed to connect to 10.7.12.140 port 3001 after 5 ms: Couldn't connect to server
+
+$ lsof -nP -iTCP:8443 -sTCP:LISTEN   (standby must stay up)
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+nginx   80671 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)
+nginx   80672 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)

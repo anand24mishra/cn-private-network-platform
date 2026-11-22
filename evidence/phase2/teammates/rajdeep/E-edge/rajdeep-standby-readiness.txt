@@ -1,0 +1,66 @@
+# Rajdeep standby readiness — 2026-11-22 21:13:55 IST
+
+$ curl -i http://10.7.12.140:3001/api/status
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 15:43:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}
+
+$ lsof -nP -iTCP:3001 -sTCP:LISTEN
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    65675 rajdeep   15u  IPv4 0xc455927018858da9      0t0  TCP *:3001 (LISTEN)
+
+$ grep -nE "listen|server |ssl_" config/nginx/nginx-standby.conf
+8:    server 10.7.12.140:3001 max_fails=1 fail_timeout=5s;
+9:    server 10.7.26.0:3002 max_fails=1 fail_timeout=5s;
+11:  server {
+12:    listen 10.7.12.140:8443 ssl;
+14:    ssl_certificate ../tls/team1-server.crt;
+15:    ssl_certificate_key ../tls/team1-server.key;
+16:    ssl_protocols TLSv1.2 TLSv1.3;
+
+$ ls -l config/tls/
+total 32
+-rw-r--r--  1 rajdeep  staff   232 22 Nov 20:54 server-ext.cnf
+-rw-r--r--  1 rajdeep  staff  2009 22 Nov 20:54 team1-ca.crt
+-rw-r--r--  1 rajdeep  staff  1769 22 Nov 20:54 team1-server.crt
+-rw-------@ 1 rajdeep  staff  1704  4 Oct 22:46 team1-server.key
+
+$ openssl x509 -in config/tls/team1-server.crt -noout -subject -issuer -dates -ext subjectAltName
+subject=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=app.team1.test
+issuer=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=Team1 Local CA
+notBefore=Oct  4 17:16:41 2026 GMT
+notAfter=Jan  6 17:16:41 2029 GMT
+X509v3 Subject Alternative Name: 
+    DNS:app.team1.test, DNS:api.team1.test, IP Address:10.253.140.31
+
+$ openssl verify -CAfile config/tls/team1-ca.crt config/tls/team1-server.crt
+config/tls/team1-server.crt: OK
+
+$ key/cert public key match
+key matches cert
+
+$ nginx -t -p "$PWD/" -c "$PWD/config/nginx/nginx-standby.conf"
+nginx: the configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf syntax is ok
+nginx: configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf test is successful
+
+$ lsof -nP -iTCP:8443 -sTCP:LISTEN
+nothing listening on 8443
+
+$ curl Backend B direct (dependency for standby pool)
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 15:43:56 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}

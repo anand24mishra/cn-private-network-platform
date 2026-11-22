@@ -1,0 +1,6 @@
+# Raw terminal captures: keep bytes exactly as recorded (HTTP headers end in CRLF,
+# tools pad lines with spaces). Exempt them from whitespace checks; do not normalise.
+*.txt -whitespace
+*.md -whitespace
+*.pf -whitespace
+README.md whitespace

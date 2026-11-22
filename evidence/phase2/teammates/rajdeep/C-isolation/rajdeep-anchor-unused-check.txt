@@ -1,0 +1,11 @@
+Mon Nov 23 00:47:30 IST 2026
+=== CHECK UNUSED ANCHOR ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+pfctl: DIOCGETRULES: Invalid argument
+anchor_rules_exit=0
+=== APPLE CHILD ANCHORS (after) ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+  com.apple/200.AirDrop
+  com.apple/250.ApplicationFirewall
