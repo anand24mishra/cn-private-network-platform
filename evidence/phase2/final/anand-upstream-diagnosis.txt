@@ -1,0 +1,29 @@
+Mon Nov 23 02:05:38 IST 2026
+=== ANAND WIFI IP ===
+10.7.2.253
+=== BACKEND A TCP ===
+Connection to 10.7.12.140 port 3001 [tcp/redwood-broker] succeeded!
+a_tcp_exit=0
+=== BACKEND B TCP ===
+nc: connectx to 10.7.26.0 port 3002 (tcp) failed: Operation timed out
+b_tcp_exit=1
+=== BACKEND A HTTP ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    312      0 --:--:-- --:--:-- --:--:--   315
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 20:35:41 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}a_http_exit=0
+=== BACKEND B HTTP ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+curl: (28) Failed to connect to 10.7.26.0 port 3002 after 3006 ms: Timeout was reached
+b_http_exit=28

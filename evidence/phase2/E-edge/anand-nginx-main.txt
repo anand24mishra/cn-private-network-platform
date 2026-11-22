@@ -1,0 +1,30 @@
+# nginx config test + listener Sun Nov 22 20:56:20 IST 2026
+nginx: the configuration file /Users/anandmishra1/cn-private-network-platform/config/nginx/nginx.conf syntax is ok
+nginx: configuration file /Users/anandmishra1/cn-private-network-platform/config/nginx/nginx.conf test is successful
+COMMAND   PID         USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+nginx   82512 anandmishra1    6u  IPv4 0x49a1a190044730d7      0t0  TCP 10.7.2.253:8443 (LISTEN)
+nginx   82514 anandmishra1    6u  IPv4 0x49a1a190044730d7      0t0  TCP 10.7.2.253:8443 (LISTEN)
+worker_processes 1;
+
+error_log /tmp/cn-nginx-error.log notice;
+pid /tmp/cn-nginx.pid;
+
+events {
+    worker_connections 128;
+}
+
+http {
+    default_type application/octet-stream;
+
+    access_log /tmp/cn-nginx-access.log;
+
+    upstream backend_pool {
+        server 10.7.12.140:3001 max_fails=1 fail_timeout=5s;
+        server 10.7.26.0:3002 max_fails=1 fail_timeout=5s;
+    }
+
+    server {
+    listen 10.7.2.253:8443 ssl;
+    server_name app.team1.test api.team1.test;
+
+    ssl_certi

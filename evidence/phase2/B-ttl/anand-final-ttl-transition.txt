@@ -1,0 +1,520 @@
+===== SAMPLE 1 01:32:47 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 2 01:32:49 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	28	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 3 01:32:52 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	25	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 4 01:32:54 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	23	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 5 01:32:56 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	21	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 6 01:32:58 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	19	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 7 01:33:00 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	17	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 8 01:33:02 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	15	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 9 01:33:04 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	13	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 10 01:33:06 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	11	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 11 01:33:09 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	8	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 12 01:33:11 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	6	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 13 01:33:13 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	4	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 14 01:33:15 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	2	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 15 01:33:17 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 16 01:33:19 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	28	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 17 01:33:21 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	26	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 18 01:33:23 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	24	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 19 01:33:25 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	22	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 20 01:33:27 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	20	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 21 01:33:29 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	18	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 22 01:33:31 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	15	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 23 01:33:34 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	13	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 24 01:33:36 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	11	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 25 01:33:38 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	9	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 26 01:33:40 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	7	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 27 01:33:42 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	5	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 28 01:33:44 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	3	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 29 01:33:46 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	1	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 30 01:33:49 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 31 01:33:51 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	28	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 32 01:33:53 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	26	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 33 01:33:55 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	24	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 34 01:33:57 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	22	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 35 01:33:59 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	20	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 36 01:34:01 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	18	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 37 01:34:03 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	16	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 38 01:34:05 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	14	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 39 01:34:07 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	12	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+===== SAMPLE 40 01:34:09 =====
+=== ANAND CACHE ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	10	IN	A	10.7.2.253
+=== RAJAT UPSTREAM DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253

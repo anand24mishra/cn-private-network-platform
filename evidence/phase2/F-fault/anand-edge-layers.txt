@@ -1,0 +1,23 @@
+# TLS/TCP check of own edge Sun Nov 22 20:56:23 IST 2026
+Connection to 10.7.2.253 port 8443 [tcp/pcsync-https] succeeded!
+subject=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=app.team1.test
+issuer=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=Team1 Local CA
+Verification: OK
+Verify return code: 0 (ok)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100   157  100   157    0     0     71      0  0:00:02  0:00:02 --:--:--    71
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:26:25 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.31.6</center>
+</body>
+</html>

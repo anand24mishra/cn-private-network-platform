@@ -1,0 +1,29 @@
+Mon Nov 23 00:52:39 IST 2026
+=== DIRECT BACKEND A: EXPECT 200 ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    937      0 --:--:-- --:--:-- --:--:--   966
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:22:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}anand_a_exit=0
+=== HTTPS THROUGH MAIN NGINX ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    317      0 --:--:-- --:--:-- --:--:--   318
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 19:22:39 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}https_exit=0
