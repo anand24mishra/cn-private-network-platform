@@ -1,0 +1,88 @@
+# Rajdeep Signal 4 extra preflight (read-only) — 2026-11-22 23:37:54 IST
+
+$ curl -v ... standby (TLS detail)
+* Connected to app.team1.test (10.7.12.140) port 8443
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+*  subject: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=app.team1.test
+*  issuer: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=Team1 Local CA
+*  SSL certificate verify ok.
+< HTTP/1.1 200 OK
+
+$ 6x standby: HTTP + X-Backend
+HTTP/1.1 200 OK X-Backend: B
+HTTP/1.1 200 OK X-Backend: A
+HTTP/1.1 200 OK X-Backend: B
+HTTP/1.1 200 OK X-Backend: A
+HTTP/1.1 200 OK X-Backend: B
+HTTP/1.1 200 OK X-Backend: A
+
+$ curl Backend B direct
+HTTP 200
+
+$ ps standby nginx + Backend A
+  PID COMMAND
+80671 nginx: master process nginx -p /Users/rajdeep/Desktop/cn-private-network-platform/ -c /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf    
+  PID COMMAND
+96309 node backend/server.js
+
+$ nginx -t standby
+nginx: the configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf syntax is ok
+nginx: configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf test is successful
+
+$ grep listen/server/ssl standby conf
+8:    server 10.7.12.140:3001 max_fails=1 fail_timeout=5s;
+9:    server 10.7.26.0:3002 max_fails=1 fail_timeout=5s;
+12:    listen 10.7.12.140:8443 ssl;
+14:    ssl_certificate ../tls/team1-server.crt;
+15:    ssl_certificate_key ../tls/team1-server.key;
+
+$ key perms + ignored
+-rw-------@ 1 rajdeep  staff  1704  4 Oct 22:46 config/tls/team1-server.key
+.gitignore:8:*.key	config/tls/team1-server.key
+
+$ cert SAN
+    DNS:app.team1.test, DNS:api.team1.test, IP Address:10.253.140.31
+
+$ PF state (cn_phase2 anchor must be absent)
+0
+com.apple
+
+$ networksetup -getdnsservers Wi-Fi (Rajdeep, unchanged)
+There aren't any DNS Servers set on Wi-Fi.
+
+$ current DNS answers (read-only, expect OLD 10.7.2.253)
+@10.7.10.96 app:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +noall +answer +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+@10.7.10.96 api:
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +noall +answer +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+@10.7.26.0 app:
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +noall +answer +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+@10.7.26.0 api:
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test A +noall +answer +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+
+$ git status --short
+?? config/firewall/
+?? config/nginx/nginx-standby.conf
+?? docs/rajdeep-phase2-results.md
+?? evidence/phase2/
+
+$ tail -3 standby access log
+10.7.12.140 - - [22/Nov/2026:23:37:54 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:23:37:54 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:23:37:54 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"

@@ -1,0 +1,43 @@
+Mon Nov 23 01:15:48 IST 2026
+=== MAC IP ===
+10.7.12.140
+=== PF STATUS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled for 0 days 00:19:07          Debug: Urgent
+=== BACKEND A FIREWALL RULES ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+=== PORT 3001 LISTENER ===
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    96309 rajdeep   15u  IPv4 0x93860391a8379c17      0t0  TCP *:3001 (LISTEN)
+=== LOCALHOST TEST ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    575      0 --:--:-- --:--:-- --:--:--   580
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:45:48 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}local_exit=0
+=== LAN IP TEST ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    648      0 --:--:-- --:--:-- --:--:--   659
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:45:48 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}lan_exit=0
+=== BACKEND SERVER PROCESSES ===
+96309 node backend/server.js

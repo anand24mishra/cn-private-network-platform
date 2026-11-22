@@ -1,0 +1,30 @@
+# Rajdeep checkpoint 0 — 2026-11-22 21:14:31 IST
+$ networksetup -getinfo Wi-Fi
+DHCP Configuration
+IP address: 10.7.12.140
+Subnet mask: 255.255.224.0
+Router: 10.7.0.1
+Client ID: 
+IPv6: Automatic
+IPv6 IP address: none
+IPv6 Router: none
+Wi-Fi ID: 10:9f:41:c5:c7:51
+$ ifconfig en0 | grep inet
+	inet 10.7.12.140 netmask 0xffffe000 broadcast 10.7.31.255
+$ route -n get default | grep gateway
+    gateway: 10.7.0.1
+$ ping -c 2 10.7.10.96
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 9.969/23.009/36.050/13.040 ms
+$ ping -c 2 10.7.2.253
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.503/38.476/48.449/9.973 ms
+$ ping -c 2 10.7.12.140
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.150/0.242/0.334/0.092 ms
+$ ping -c 2 10.7.26.0
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 8.445/26.358/44.270/17.913 ms
+$ nginx -v; node --version
+nginx version: nginx/1.31.6
+v20.20.2
