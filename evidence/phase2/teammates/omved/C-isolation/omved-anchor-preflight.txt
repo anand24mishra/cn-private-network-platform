@@ -1,0 +1,28 @@
+Mon Nov 23 00:44:09 IST 2026
+=== PF STATUS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled                              Debug: Urgent
+=== MAIN RULES ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+scrub-anchor "com.apple/*" all fragment reassemble
+anchor "com.apple/*" all
+=== APPLE CHILD ANCHORS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+  com.apple/200.AirDrop
+  com.apple/250.ApplicationFirewall
+=== BACKEND B LISTENER ===
+COMMAND   PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    57757 omvednagre   12u  IPv4 0x4ac23bdebfb627f4      0t0  TCP *:3002 (LISTEN)
+=== FIREWALL CANDIDATE ===
+pass in quick on en0 proto tcp from 10.7.2.253 to 10.7.26.0 port 3002 keep state
+pass in quick on en0 proto tcp from 10.7.12.140 to 10.7.26.0 port 3002 keep state
+block drop in quick on en0 proto tcp from any to 10.7.26.0 port 3002
+=== SYNTAX CHECK ===
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+syntax_exit=0

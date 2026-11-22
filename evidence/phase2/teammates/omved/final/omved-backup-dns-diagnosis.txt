@@ -1,0 +1,16 @@
+Mon Nov 23 02:21:06 IST 2026
+=== BACKUP DNS PROCESSES ===
+=== PORT 53 LISTENERS ===
+=== BACKUP DNS CONFIGURATION ===
+port=53
+listen-address=10.7.26.0
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+=== CONFIGURATION VALIDATION ===
+dnsmasq: syntax check OK.
+=== LOCAL BACKUP DNS CHECK ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached

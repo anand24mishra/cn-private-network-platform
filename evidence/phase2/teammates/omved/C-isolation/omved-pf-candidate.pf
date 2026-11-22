@@ -1,0 +1,3 @@
+pass in quick on en0 proto tcp from 10.7.2.253 to 10.7.26.0 port 3002 keep state
+pass in quick on en0 proto tcp from 10.7.12.140 to 10.7.26.0 port 3002 keep state
+block drop in quick on en0 proto tcp from any to 10.7.26.0 port 3002

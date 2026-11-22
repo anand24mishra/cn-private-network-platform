@@ -1,0 +1,32 @@
+Mon Nov 23 02:19:38 IST 2026
+=== BACKEND B LISTENER ===
+COMMAND   PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    13690 omvednagre   12u  IPv4 0x5b086ac2771c4280      0t0  TCP *:3002 (LISTEN)
+=== BACKEND B LOCAL ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   3000      0 --:--:-- --:--:-- --:--:--  3222
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 20:49:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}local_exit=0
+=== BACKEND B LAN ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   1035      0 --:--:-- --:--:-- --:--:--  1074
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 20:49:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}lan_exit=0

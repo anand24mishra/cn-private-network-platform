@@ -1,0 +1,69 @@
+=== BACKUP DNS DURING PRIMARY OUTAGE ===
+Sun Nov 22 23:00:23 IST 2026
+=== Primary DNS should be unavailable ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test +time=1 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+primary_exit=9
+=== Backup DNS must answer ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 40029
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;app.team1.test.			IN	A
+
+;; ANSWER SECTION:
+app.team1.test.		30	IN	A	10.7.2.253
+
+;; Query time: 7 msec
+;; SERVER: 10.7.26.0#53(10.7.26.0)
+;; WHEN: Sun Nov 22 23:00:24 IST 2026
+;; MSG SIZE  rcvd: 59
+
+backup_exit=0
+=== Backup DNS for API hostname ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28896
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;api.team1.test.			IN	A
+
+;; ANSWER SECTION:
+api.team1.test.		30	IN	A	10.7.2.253
+
+;; Query time: 3 msec
+;; SERVER: 10.7.26.0#53(10.7.26.0)
+;; WHEN: Sun Nov 22 23:00:24 IST 2026
+;; MSG SIZE  rcvd: 59
+
+api_exit=0
+=== Backend B health ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   1683      0 --:--:-- --:--:-- --:--:--  1705
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 17:30:24 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}backend_exit=0
