@@ -1,0 +1,93 @@
+
+[2026-11-22 21:18:50 IST] $ ipconfig getifaddr en0
+10.7.10.96
+exit=0
+
+[2026-11-22 21:18:50 IST] $ networksetup -getinfo Wi-Fi
+DHCP Configuration
+IP address: 10.7.10.96
+Subnet mask: 255.255.224.0
+Router: 10.7.0.1
+Client ID: 
+IPv6: Automatic
+IPv6 IP address: none
+IPv6 Router: none
+Wi-Fi ID: 10:9f:41:c0:c1:05
+exit=0
+
+[2026-11-22 21:18:50 IST] $ route -n get default
+   route to: default
+destination: default
+       mask: default
+    gateway: 10.7.0.1
+  interface: en0
+      flags: <UP,GATEWAY,DONE,STATIC,PRCLONING,GLOBAL>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0         0         0         0      1500         0 
+exit=0
+
+[2026-11-22 21:18:50 IST] $ ping -c 3 -W 1000 10.7.10.96
+PING 10.7.10.96 (10.7.10.96): 56 data bytes
+64 bytes from 10.7.10.96: icmp_seq=0 ttl=64 time=0.075 ms
+64 bytes from 10.7.10.96: icmp_seq=1 ttl=64 time=1.900 ms
+64 bytes from 10.7.10.96: icmp_seq=2 ttl=64 time=0.105 ms
+
+--- 10.7.10.96 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.075/0.693/1.900/0.853 ms
+exit=0
+
+[2026-11-22 21:18:52 IST] $ ping -c 3 -W 1000 10.7.2.253
+PING 10.7.2.253 (10.7.2.253): 56 data bytes
+64 bytes from 10.7.2.253: icmp_seq=0 ttl=64 time=37.165 ms
+64 bytes from 10.7.2.253: icmp_seq=1 ttl=64 time=8.103 ms
+64 bytes from 10.7.2.253: icmp_seq=2 ttl=64 time=52.209 ms
+
+--- 10.7.2.253 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 8.103/32.492/52.209/18.307 ms
+exit=0
+
+[2026-11-22 21:18:54 IST] $ ping -c 3 -W 1000 10.7.12.140
+PING 10.7.12.140 (10.7.12.140): 56 data bytes
+64 bytes from 10.7.12.140: icmp_seq=0 ttl=64 time=7.253 ms
+64 bytes from 10.7.12.140: icmp_seq=1 ttl=64 time=24.884 ms
+64 bytes from 10.7.12.140: icmp_seq=2 ttl=64 time=69.588 ms
+
+--- 10.7.12.140 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 7.253/33.908/69.588/26.236 ms
+exit=0
+
+[2026-11-22 21:18:56 IST] $ ping -c 3 -W 1000 10.7.26.0
+PING 10.7.26.0 (10.7.26.0): 56 data bytes
+64 bytes from 10.7.26.0: icmp_seq=0 ttl=64 time=12.338 ms
+64 bytes from 10.7.26.0: icmp_seq=1 ttl=64 time=27.068 ms
+64 bytes from 10.7.26.0: icmp_seq=2 ttl=64 time=74.227 ms
+
+--- 10.7.26.0 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 12.338/37.878/74.227/26.397 ms
+exit=0
+
+[2026-11-22 21:18:58 IST] $ lsof -nP -iUDP:53 -iTCP:53
+exit=1
+
+[2026-11-22 21:18:58 IST] $ pgrep -fl dnsmasq
+exit=1
+
+[2026-11-22 21:18:58 IST] $ dig @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+exit=9
+
+[2026-11-22 21:19:00 IST] $ dig @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+exit=9

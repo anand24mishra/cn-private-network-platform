@@ -1,0 +1,14 @@
+
+[2026-11-22 23:38:58 IST] mkdir -p /Users/rajat/cn-phase2-backups 
+exit=0
+
+[2026-11-22 23:38:58 IST] cp -p -n /Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf /Users/rajat/cn-phase2-backups/primary-before-signal4.conf 
+exit=0
+
+[2026-11-22 23:38:58 IST] diff -u /Users/rajat/cn-phase2-backups/primary-before-signal4.conf /Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf 
+exit=0
+
+[2026-11-22 23:38:58 IST] stat -f %Sp\ %Su:%Sg\ %m\ %N /Users/rajat/cn-phase2-backups/primary-before-signal4.conf /Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf 
+-rw-r--r-- rajat:staff 1795361250 /Users/rajat/cn-phase2-backups/primary-before-signal4.conf
+-rw-r--r-- rajat:staff 1795361250 /Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+exit=0

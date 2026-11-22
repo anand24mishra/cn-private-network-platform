@@ -1,0 +1,132 @@
+
+[2026-11-22 21:26:00 IST] ls -ld /etc/resolver /etc/resolver/team1.test 
+ls: /etc/resolver: No such file or directory
+ls: /etc/resolver/team1.test: No such file or directory
+
+exit=1
+
+[2026-11-22 21:26:00 IST] dig @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 21:26:00 IST] dig @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 21:26:00 IST] dig @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 21:26:00 IST] curl --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -i https://app.team1.test:8443/api/status 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0     84      0 --:--:-- --:--:-- --:--:--    84
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+exit=0
+
+[2026-11-22 21:26:00 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:01 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:01 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:01 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:01 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:02 IST] curl -sS --noproxy \* --connect-timeout 3 --max-time 5 --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -D - -o /dev/null https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:56:02 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+
+exit=0
+
+[2026-11-22 21:26:02 IST] nc -G 3 -vz 10.7.12.140 8443 
+Connection to 10.7.12.140 port 8443 [tcp/pcsync-https] succeeded!
+
+exit=0

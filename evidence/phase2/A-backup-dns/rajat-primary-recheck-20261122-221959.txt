@@ -1,0 +1,15 @@
+Sun Nov 22 22:19:59 IST 2026
+dig @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+exit=9
+dig @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+exit=9

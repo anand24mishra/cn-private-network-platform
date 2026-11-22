@@ -1,0 +1,33 @@
+Mon Nov 23 02:03:04 IST 2026
+=== BRANCH ===
+phase2
+=== STATUS ===
+ M README.md
+M  config/dnsmasq/primary.conf
+ M config/nginx/nginx.conf
+ M config/tls/server-ext.cnf
+ M docs/machine-inventory.md
+ M docs/topology.md
+?? docs/rajat-phase2-results.md
+?? evidence/phase2/
+=== STAGED CHANGES ===
+ config/dnsmasq/primary.conf | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+=== UNSTAGED CHANGES ===
+ README.md                 | 28 +++++++++++++++++++++++-----
+ config/nginx/nginx.conf   |  6 +++---
+ config/tls/server-ext.cnf |  2 +-
+ docs/machine-inventory.md | 19 ++++++++++++-------
+ docs/topology.md          | 36 +++++++++++++++++++-----------------
+ 5 files changed, 58 insertions(+), 33 deletions(-)
+=== STAGED DNS RECORDS ===
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+=== WORKING DNS RECORDS ===
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+=== DIFF VALIDATION ===
+=== POTENTIALLY SENSITIVE FILES ===
+=== REMOTES ===
+origin	https://github.com/anand24mishra/cn-private-network-platform.git (fetch)
+origin	https://github.com/anand24mishra/cn-private-network-platform.git (push)

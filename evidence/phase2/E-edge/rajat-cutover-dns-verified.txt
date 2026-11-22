@@ -1,0 +1,23 @@
+Mon Nov 23 00:05:24 IST 2026
+=== DNS server: 10.7.10.96 ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.12.140
+=== DNS server: 10.7.26.0 ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.12.140

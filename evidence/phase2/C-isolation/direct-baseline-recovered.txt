@@ -1,0 +1,43 @@
+Mon Nov 23 00:42:05 IST 2026
+=== Backend A ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    224      0 --:--:-- --:--:-- --:--:--   224
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:12:06 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}a_exit=0
+=== Backend B ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    974      0 --:--:-- --:--:-- --:--:--  1000
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:12:06 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}b_exit=0
+=== Main nginx HTTPS ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    162      0 --:--:-- --:--:-- --:--:--   162
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 19:12:06 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}https_exit=0

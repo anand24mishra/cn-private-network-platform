@@ -1,0 +1,141 @@
+
+[2026-11-22 21:17:24 IST] $ pwd
+/Users/rajat/VScode/GitHub/cn-private-network-platform
+exit=0
+
+[2026-11-22 21:17:24 IST] $ git branch --show-current
+phase2
+exit=0
+
+[2026-11-22 21:17:24 IST] $ git status
+On branch phase2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   config/dnsmasq/primary.conf
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   config/nginx/nginx.conf
+	modified:   config/tls/server-ext.cnf
+	modified:   docs/machine-inventory.md
+	modified:   docs/topology.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	evidence/phase2/
+
+exit=0
+
+[2026-11-22 21:17:24 IST] $ git ls-files -u
+exit=0
+
+[2026-11-22 21:17:24 IST] $ git diff --check
+exit=0
+
+[2026-11-22 21:17:24 IST] $ git diff --cached --check
+exit=0
+
+[2026-11-22 21:17:24 IST] $ ipconfig getifaddr en0
+ipconfig_server_port failed (os/kern) unknown error code (44c)
+exit=1
+
+[2026-11-22 21:17:24 IST] $ networksetup -getinfo Wi-Fi
+AuthorizationCreate() failed: -60008
+exit=0
+
+[2026-11-22 21:17:24 IST] $ route -n get default
+route: socket: Operation not permitted
+exit=71
+
+[2026-11-22 21:17:24 IST] $ ping -c 3 -W 1000 10.7.10.96
+ping: sendto: Operation not permitted
+ping: sendto: Operation not permitted
+PING 10.7.10.96 (10.7.10.96): 56 data bytes
+Request timeout for icmp_seq 0
+ping: sendto: Operation not permitted
+Request timeout for icmp_seq 1
+
+--- 10.7.10.96 ping statistics ---
+3 packets transmitted, 0 packets received, 100.0% packet loss
+exit=2
+
+[2026-11-22 21:17:28 IST] $ ping -c 3 -W 1000 10.7.2.253
+ping: sendto: Operation not permitted
+ping: sendto: Operation not permitted
+PING 10.7.2.253 (10.7.2.253): 56 data bytes
+Request timeout for icmp_seq 0
+ping: sendto: Operation not permitted
+Request timeout for icmp_seq 1
+
+--- 10.7.2.253 ping statistics ---
+3 packets transmitted, 0 packets received, 100.0% packet loss
+exit=2
+
+[2026-11-22 21:17:32 IST] $ ping -c 3 -W 1000 10.7.12.140
+ping: sendto: Operation not permitted
+ping: sendto: Operation not permitted
+PING 10.7.12.140 (10.7.12.140): 56 data bytes
+Request timeout for icmp_seq 0
+ping: sendto: Operation not permitted
+Request timeout for icmp_seq 1
+
+--- 10.7.12.140 ping statistics ---
+3 packets transmitted, 0 packets received, 100.0% packet loss
+exit=2
+
+[2026-11-22 21:17:36 IST] $ ping -c 3 -W 1000 10.7.26.0
+ping: sendto: Operation not permitted
+ping: sendto: Operation not permitted
+PING 10.7.26.0 (10.7.26.0): 56 data bytes
+Request timeout for icmp_seq 0
+ping: sendto: Operation not permitted
+Request timeout for icmp_seq 1
+
+--- 10.7.26.0 ping statistics ---
+3 packets transmitted, 0 packets received, 100.0% packet loss
+exit=2
+
+[2026-11-22 21:17:40 IST] $ cat config/dnsmasq/primary.conf
+port=53
+listen-address=10.7.10.96
+interface=en0
+bind-interfaces
+
+domain-needed
+bogus-priv
+server=8.8.8.8
+
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+
+local-ttl=30
+
+log-queries
+log-facility=/tmp/cn-dnsmasq.log
+
+pid-file=/tmp/cn-dnsmasq.pid
+exit=0
+
+[2026-11-22 21:17:40 IST] $ dnsmasq --test --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+dnsmasq: syntax check OK.
+exit=0
+
+[2026-11-22 21:17:40 IST] $ lsof -nP -iUDP:53 -iTCP:53
+exit=1
+
+[2026-11-22 21:17:40 IST] $ pgrep -fl dnsmasq
+sysmon request failed with error: sysmond service not found
+pgrep: Cannot get process list
+exit=3
+
+[2026-11-22 21:17:40 IST] $ dig @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+/AppleInternal/Library/BuildRoots/4~CcsDugCKuMOHwtlEa3dYKQ1AvKSrZLqTUShNFd8/Library/Caches/com.apple.xbs/TemporaryDirectory.rnaN6X/Sources/bind9/bind9/lib/isc/unix/socket.c:5580: bind: Operation not permitted
+dig: isc_socket_bind: unexpected error
+exit=10
+
+[2026-11-22 21:17:40 IST] $ dig @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+/AppleInternal/Library/BuildRoots/4~CcsDugCKuMOHwtlEa3dYKQ1AvKSrZLqTUShNFd8/Library/Caches/com.apple.xbs/TemporaryDirectory.rnaN6X/Sources/bind9/bind9/lib/isc/unix/socket.c:5580: bind: Operation not permitted
+dig: isc_socket_bind: unexpected error
+exit=10

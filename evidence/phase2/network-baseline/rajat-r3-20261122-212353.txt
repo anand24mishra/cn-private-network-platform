@@ -1,0 +1,76 @@
+
+[2026-11-22 21:23:53 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i http://10.7.12.140:3001/api/status
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 15:53:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}exit=0
+
+[2026-11-22 21:23:54 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i http://10.7.26.0:3002/api/status
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 15:53:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}exit=0
+
+[2026-11-22 21:23:54 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 https://app.team1.test:8443/api/status
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:53:55 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}exit=0
+
+[2026-11-22 21:23:55 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 https://app.team1.test:8443/api/status
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:53:55 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}exit=0
+
+[2026-11-22 21:23:55 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 https://app.team1.test:8443/api/status
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:53:55 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}exit=0
+
+[2026-11-22 21:23:56 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 https://app.team1.test:8443/api/status
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:53:56 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}exit=0
+
+[2026-11-22 21:23:56 IST] $ curl --noproxy * --connect-timeout 3 --max-time 5 -sS -i --cacert config/tls/team1-ca.crt https://app.team1.test:8443/api/status
+curl: (6) Could not resolve host: app.team1.test
+exit=6

@@ -1,0 +1,31 @@
+Mon Nov 23 02:25:45 IST 2026
+=== PRIMARY DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+=== BACKUP DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+=== BACKUP API DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+=== BACKEND A ===
+backend_a_http=200
+backend_a_exit=0
+=== BACKEND B ===
+backend_b_http=200
+backend_b_exit=0
+=== MAIN HTTPS ===
+main_https_http=200
+main_https_exit=0
+=== STANDBY HTTPS ===
+standby_https_http=200
+standby_https_exit=0
