@@ -1,0 +1,29 @@
+Mon Nov 23 00:48:11 IST 2026
+$ pfctl -a com.apple/900.cn-phase2-a -f evidence/phase2/C-isolation/rajdeep-pf-candidate.pf
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+No ALTQ support in kernel
+ALTQ related functions disabled
+load_exit=0
+$ pfctl -a com.apple/900.cn-phase2-a -sr
+No ALTQ support in kernel
+ALTQ related functions disabled
+pass in quick on en0 inet proto tcp from 10.7.2.253 to 10.7.12.140 port = 3001 flags S/SA keep state
+block drop in quick on en0 inet proto tcp from any to 10.7.12.140 port = 3001
+$ pfctl -s info | grep Status:
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled                              Debug: Urgent
+$ pfctl -sr   (main ruleset must be unchanged)
+No ALTQ support in kernel
+ALTQ related functions disabled
+scrub-anchor "com.apple/*" all fragment reassemble
+anchor "com.apple/*" all
+$ pfctl -a com.apple -s Anchors
+No ALTQ support in kernel
+ALTQ related functions disabled
+  com.apple/200.AirDrop
+  com.apple/250.ApplicationFirewall
+  com.apple/900.cn-phase2-a

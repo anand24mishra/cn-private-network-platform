@@ -1,0 +1,234 @@
+
+[2026-11-22 23:38:04 IST] git status --short --branch 
+## phase2
+ M README.md
+M  config/dnsmasq/primary.conf
+ M config/nginx/nginx.conf
+ M config/tls/server-ext.cnf
+ M docs/machine-inventory.md
+ M docs/topology.md
+?? docs/rajat-phase2-results.md
+?? evidence/phase2/
+
+exit=0
+
+[2026-11-22 23:38:04 IST] git ls-files -u 
+
+exit=0
+
+[2026-11-22 23:38:04 IST] git diff --check 
+
+exit=0
+
+[2026-11-22 23:38:04 IST] git diff --cached --check 
+
+exit=0
+
+[2026-11-22 23:38:04 IST] ipconfig getifaddr en0 
+10.7.10.96
+
+exit=0
+
+[2026-11-22 23:38:04 IST] pgrep -lf \^/opt/homebrew/sbin/dnsmasq 
+17088 /opt/homebrew/sbin/dnsmasq --no-daemon --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+
+exit=0
+
+[2026-11-22 23:38:04 IST] grep -nE \^\(port\|listen-address\|interface\|address\|local-ttl\) config/dnsmasq/primary.conf 
+1:port=53
+2:listen-address=10.7.10.96
+3:interface=en0
+10:address=/app.team1.test/10.7.2.253
+11:address=/api.team1.test/10.7.2.253
+13:local-ttl=30
+
+exit=0
+
+[2026-11-22 23:38:04 IST] /opt/homebrew/sbin/dnsmasq --test --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf 
+dnsmasq: syntax check OK.
+
+exit=0
+
+[2026-11-22 23:38:04 IST] dig @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:04 IST] dig @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:05 IST] dig @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:05 IST] dig @10.7.26.0 api.team1.test A +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:05 IST] dig @10.7.10.96 app.team1.test A +tcp +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +tcp +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:05 IST] dig @10.7.26.0 app.team1.test A +tcp +time=2 +tries=1 +noall +answer 
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +tcp +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* -sS -i --connect-timeout 3 --max-time 8 http://10.7.12.140:3001/api/status 
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* -sS -i --connect-timeout 3 --max-time 8 http://10.7.26.0:3002/api/status 
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.2.253 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.12.140 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:05 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.12.140 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:06 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.12.140 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:06 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}
+exit=0
+
+[2026-11-22 23:38:06 IST] curl --noproxy \* --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.12.140 -sS -i --connect-timeout 3 --max-time 8 https://app.team1.test:8443/api/status 
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:08:06 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+exit=0

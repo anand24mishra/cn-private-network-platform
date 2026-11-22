@@ -1,0 +1,17 @@
+Mon Nov 23 02:01:34 IST 2026
+=== TEMPORARY CACHE PORT 5533 ===
+COMMAND   PID         USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+dnsmasq 57747 anandmishra1    4u  IPv4 0x232b4980107b4b27      0t0  UDP 127.0.0.1:5533
+dnsmasq 57747 anandmishra1    5u  IPv4 0x968a60841288fa01      0t0  TCP 127.0.0.1:5533 (LISTEN)
+=== PRIMARY DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+=== BACKUP DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253

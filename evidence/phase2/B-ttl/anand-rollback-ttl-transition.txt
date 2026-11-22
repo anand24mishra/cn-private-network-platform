@@ -1,0 +1,308 @@
+========== SAMPLE 1 ==========
+00:15:38
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 2 ==========
+00:15:40
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		28	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 3 ==========
+00:15:42
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		26	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 4 ==========
+00:15:44
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 5 ==========
+00:15:46
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		22	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 6 ==========
+00:15:48
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		20	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 7 ==========
+00:15:50
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		18	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 8 ==========
+00:15:52
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		16	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 9 ==========
+00:15:54
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		14	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 10 ==========
+00:15:56
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		12	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 11 ==========
+00:15:58
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		10	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 12 ==========
+00:16:01
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		7	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 13 ==========
+00:16:03
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		5	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 14 ==========
+00:16:05
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		3	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 15 ==========
+00:16:07
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		1	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 16 ==========
+00:16:09
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 17 ==========
+00:16:11
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		28	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 18 ==========
+00:16:13
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		26	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 19 ==========
+00:16:15
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		24	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 20 ==========
+00:16:17
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		22	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 21 ==========
+00:16:19
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		20	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140
+========== SAMPLE 22 ==========
+00:16:21
+=== Cached DNS (port 5533) ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		18	IN	A	10.7.12.140
+=== Primary DNS (direct) ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.12.140

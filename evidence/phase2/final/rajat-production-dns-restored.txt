@@ -1,0 +1,24 @@
+Mon Nov 23 02:00:55 IST 2026
+=== PRODUCTION DNS PROCESS ===
+45989 sudo /opt/homebrew/sbin/dnsmasq --no-daemon --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+45990 sudo /opt/homebrew/sbin/dnsmasq --no-daemon --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+45991 /opt/homebrew/sbin/dnsmasq --no-daemon --conf-file=/Users/rajat/VScode/GitHub/cn-private-network-platform/config/dnsmasq/primary.conf
+=== PRIMARY DNS APP ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+=== PRIMARY DNS API ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 api.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.7.2.253
+=== BACKUP DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+=== TEMPORARY PORT 1053 ===

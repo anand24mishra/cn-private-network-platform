@@ -1,0 +1,57 @@
+# Rajdeep final state snapshot (read-only) — 2026-11-23 02:41:36 IST
+$ curl -i http://10.7.12.140:3001/api/status
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 21:11:36 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}
+backend_a_exit=0
+$ lsof -nP -iTCP:3001 -sTCP:LISTEN
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    96309 rajdeep   15u  IPv4 0x93860391a8379c17      0t0  TCP *:3001 (LISTEN)
+$ lsof -nP -iTCP:8443 -sTCP:LISTEN
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+nginx   80671 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)
+nginx   80672 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)
+$ standby HTTPS --resolve 10.7.12.140 (no -k)
+HTTP/1.1 200 OK
+X-Backend: A
+$ main edge HTTPS --resolve 10.7.2.253 (no -k)
+curl: (28) Connection timed out after 10004 milliseconds
+$ dig restored records
+@10.7.10.96 app: 10.7.2.253
+@10.7.10.96 api: 10.7.2.253
+@10.7.26.0 app: 
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test A +short +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+@10.7.26.0 api: 
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 api.team1.test A +short +time=3 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+$ networksetup -getdnsservers Wi-Fi
+There aren't any DNS Servers set on Wi-Fi.
+PF: see F-troubleshooting/rajdeep-final-backend-check.txt (02:06 IST, Status: Disabled, anchor empty)
+
+# Follow-up reachability — 2026-11-23 02:42:03 IST
+$ ping -c 2 -t 4 10.7.2.253
+--- 10.7.2.253 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+$ ping -c 2 -t 4 10.7.26.0
+--- 10.7.26.0 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+$ ping -c 2 -t 4 10.7.10.96
+2 packets transmitted, 1 packets received, 50.0% packet loss
+round-trip min/avg/max/stddev = 8.288/8.288/8.288/nan ms
+$ nc -vz -G 3 10.7.2.253 8443
+nc: connectx to 10.7.2.253 port 8443 (tcp) failed: Operation timed out
+$ curl Backend B
+curl: (28) Failed to connect to 10.7.26.0 port 3002 after 3003 ms: Timeout was reached
+HTTP 000

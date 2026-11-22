@@ -1,0 +1,32 @@
+Mon Nov 23 01:09:58 IST 2026
+=== FAULT: INCORRECT EDGE PORT 8444 ===
+* Added app.team1.test:8444:10.7.2.253 to DNS cache
+* Hostname app.team1.test was found in DNS cache
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 10.7.2.253:8444...
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0* connect to 10.7.2.253 port 8444 from 10.7.10.96 port 57682 failed: Connection refused
+* Failed to connect to app.team1.test port 8444 after 1017 ms: Could not connect to server
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+* closing connection #0
+curl: (7) Failed to connect to app.team1.test port 8444 after 1017 ms: Could not connect to server
+fault_exit=7
+=== DIAGNOSIS: PORT COMPARISON ===
+nc: connectx to 10.7.2.253 port 8444 (tcp) failed: Connection refused
+wrong_port_exit=1
+Connection to 10.7.2.253 port 8443 [tcp/pcsync-https] succeeded!
+correct_port_exit=0
+=== RECOVERY: CORRECT PORT ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0    446      0 --:--:-- --:--:-- --:--:--   453
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 19:40:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}recovery_exit=0

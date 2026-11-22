@@ -1,0 +1,22 @@
+Mon Nov 23 01:22:06 IST 2026
+=== STAGED FILES ===
+M	config/dnsmasq/primary.conf
+=== UNSTAGED FILES ===
+M	README.md
+M	config/nginx/nginx.conf
+M	config/tls/server-ext.cnf
+M	docs/machine-inventory.md
+M	docs/topology.md
+=== DNS IN LAST COMMIT ===
+address=/app.team1.test/10.253.140.31
+address=/api.team1.test/10.253.140.31
+=== DNS CURRENTLY STAGED ===
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+=== DNS WORKING FILE ===
+address=/app.team1.test/10.7.2.253
+address=/api.team1.test/10.7.2.253
+=== STAGED DIFF CHECK ===
+=== UNSTAGED DIFF CHECK ===
+=== RAJAT RESULTS FILE ===
+     122 docs/rajat-phase2-results.md

@@ -1,0 +1,2 @@
+
+dnsmasq: failed to create listening socket for 10.7.10.96: Address already in use

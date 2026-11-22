@@ -1,0 +1,9 @@
+Mon Nov 23 01:59:49 IST 2026
+=== TEMPORARY DNS 1053: SHOULD BE EMPTY ===
+=== PRODUCTION DNS ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test A +noall +answer
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+=== DNS PROCESSES ===

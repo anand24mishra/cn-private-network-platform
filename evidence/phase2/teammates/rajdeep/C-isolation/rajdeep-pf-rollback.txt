@@ -1,0 +1,36 @@
+Mon Nov 23 00:56:41 IST 2026
+=== REMOVE BACKEND A FIREWALL RULES ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+rules cleared
+flush_exit=0
+=== RELEASE PF TOKEN ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+pf disabled
+release_exit=0
+=== VERIFY PF STATUS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled for 0 days 00:00:00          Debug: Urgent
+=== VERIFY ANCHOR CLEARED ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+=== EXTRA: MAIN RULES + APPLE ANCHORS + TOKENS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+scrub-anchor "com.apple/*" all fragment reassemble
+anchor "com.apple/*" all
+No ALTQ support in kernel
+ALTQ related functions disabled
+  com.apple/200.AirDrop
+  com.apple/250.ApplicationFirewall
+  com.apple/900.cn-phase2-a
+No ALTQ support in kernel
+ALTQ related functions disabled
+No pf starter references held
+=== EXTRA: BACKEND A + STANDBY AFTER ROLLBACK ===
+Backend A: HTTP 200
+HTTP/1.1 200 OK X-Backend: A
+$ diff /etc/pf.conf ~/cn-phase2-backups/pf.conf.before
+pf.conf identical to backup

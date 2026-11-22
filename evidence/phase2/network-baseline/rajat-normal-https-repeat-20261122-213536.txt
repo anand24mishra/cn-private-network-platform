@@ -1,0 +1,8 @@
+2026-11-22 21:35:36 IST
+ls: /etc/resolver/team1.test: No such file or directory
+curl --noproxy '*' --cacert config/tls/team1-ca.crt --connect-timeout 3 --max-time 8 -sSv -i https://app.team1.test:8443/api/status
+* Could not resolve host: app.team1.test
+* shutting down connection #0
+curl: (6) Could not resolve host: app.team1.test
+
+curl exit=6

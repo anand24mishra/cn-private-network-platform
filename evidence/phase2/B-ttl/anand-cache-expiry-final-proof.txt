@@ -1,0 +1,26 @@
+Mon Nov 23 01:50:50 IST 2026
+=== ANAND CACHE AFTER TTL EXPIRY ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+=== RAJAT UPSTREAM ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253
+=== WAIT 16 SECONDS AND RECHECK ===
+=== FINAL CACHED ANSWER ===
+
+; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 5533 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	14	IN	A	10.7.2.253
+=== FINAL UPSTREAM ANSWER ===
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 -p 1053 ttl-probe.team1.test A +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+ttl-probe.team1.test.	30	IN	A	10.7.2.253

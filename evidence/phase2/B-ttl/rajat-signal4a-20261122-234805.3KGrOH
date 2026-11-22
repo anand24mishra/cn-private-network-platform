@@ -1,0 +1,23 @@
+2026-11-22 23:48:05 IST
+$ cmp config/dnsmasq/primary.conf /Users/rajat/cn-phase2-backups/primary-before-signal4.conf
+exit=0
+$ diff -u config/dnsmasq/primary.conf /tmp/rajat-primary-signal4a.oFp2Ju
+--- config/dnsmasq/primary.conf	2026-11-22 20:57:30
++++ /tmp/rajat-primary-signal4a.oFp2Ju	2026-11-22 23:48:05
+@@ -7,8 +7,8 @@
+ bogus-priv
+ server=8.8.8.8
+ 
+-address=/app.team1.test/10.7.2.253
+-address=/api.team1.test/10.7.2.253
++address=/app.team1.test/10.7.12.140
++address=/api.team1.test/10.7.12.140
+ 
+ local-ttl=30
+ 
+exit=1 (1 means differences found)
+$ /opt/homebrew/sbin/dnsmasq --test --conf-file=/tmp/rajat-primary-signal4a.oFp2Ju
+dnsmasq: syntax check OK.
+exit=0
+$ cmp config/dnsmasq/primary.conf /Users/rajat/cn-phase2-backups/primary-before-signal4.conf
+exit=0

@@ -1,0 +1,22 @@
+# Rajdeep PF preparation (NOT activated) — 2026-11-22 21:14:35 IST
+
+## PF state before Phase 2 (sudo pfctl -s info / -sr, run 21:08 IST)
+Status: Disabled
+Rules: scrub-anchor "com.apple/*" all fragment reassemble ; anchor "com.apple/*" all
+Backup: ~/cn-phase2-backups/pf.conf.before (copy of /etc/pf.conf, 1027 bytes)
+
+$ cat config/firewall/backend-a.pf
+# Extension C: only Anand's nginx edge (10.7.2.253) may reach Backend A on TCP 3001.
+# Loaded into the "cn_phase2" anchor; Apple's own anchors stay untouched.
+block in quick on en0 inet proto tcp from ! 10.7.2.253 to 10.7.12.140 port 3001
+
+$ pfctl -vnf config/firewall/backend-a.pf   (dry run, nothing loaded)
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+block drop in quick on en0 inet proto tcp from ! 10.7.2.253 to 10.7.12.140 port = 3001
+[exit 0]
+
+$ grep cn_phase2 /etc/pf.conf
+not present (anchor not installed)

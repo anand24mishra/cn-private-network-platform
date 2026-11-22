@@ -1,0 +1,40 @@
+Sun Nov 22 23:37:03 IST 2026
+## main edge
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 18:07:03 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: B
+Cache-Control: public, max-age=60
+
+{"backend":"B","status":"ok"}exit=0
+
+## cache-client.conf
+port=5533
+listen-address=127.0.0.1
+bind-interfaces
+no-resolv
+server=/team1.test/10.7.10.96
+cache-size=1000
+log-queries
+log-facility=-
+## TTL overrides:
+none
+dnsmasq: syntax check OK.
+## 5533 listeners:
+free
+## Wi-Fi DNS
+There aren't any DNS Servers set on Wi-Fi.
+## upstream (primary/backup) now
+
+; <<>> DiG 9.10.6 <<>> @10.7.10.96 app.team1.test +noall +answer +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253
+
+; <<>> DiG 9.10.6 <<>> @10.7.26.0 app.team1.test +noall +answer +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.7.2.253

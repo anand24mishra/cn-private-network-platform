@@ -1,0 +1,83 @@
+# R5 standby nginx start + HTTPS test — 2026-11-22 21:22:08 IST
+
+$ lsof -nP -iTCP:8443 -sTCP:LISTEN   (before)
+nothing listening on 8443
+
+$ nginx -t -p "$PWD/" -c "$PWD/config/nginx/nginx-standby.conf"
+nginx: the configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf syntax is ok
+nginx: configuration file /Users/rajdeep/Desktop/cn-private-network-platform/config/nginx/nginx-standby.conf test is successful
+
+$ nginx -p "$PWD/" -c "$PWD/config/nginx/nginx-standby.conf"
+[exit 0]
+
+$ lsof -nP -iTCP:8443 -sTCP:LISTEN   (after)
+COMMAND   PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+nginx   80671 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)
+nginx   80672 rajdeep    6u  IPv4 0xfe9e723d1ffe5b8a      0t0  TCP 10.7.12.140:8443 (LISTEN)
+
+$ cat /tmp/cn-nginx-standby.pid
+80671
+
+$ curl --noproxy "*" --cacert config/tls/team1-ca.crt --resolve app.team1.test:8443:10.7.12.140 -i https://app.team1.test:8443/api/status
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Sun, 22 Nov 2026 15:52:09 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Backend: A
+Cache-Control: public, max-age=60
+
+{"backend":"A","status":"ok"}
+[exit 0]
+
+$ curl -v (TLS handshake detail, same request)
+* Connected to app.team1.test (10.7.12.140) port 8443
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+*  subject: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=app.team1.test
+*  expire date: Jan  6 17:16:41 2029 GMT
+*  issuer: C=IN; ST=Maharashtra; L=Dombivli; O=Team1; CN=Team1 Local CA
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET /api/status HTTP/1.1
+< HTTP/1.1 200 OK
+
+$ for i in 1..6: curl ... | grep HTTP/ and X-Backend   (load balancing A/B)
+HTTP/1.1 200 OK X-Backend: A
+HTTP/1.1 200 OK X-Backend: B
+HTTP/1.1 200 OK X-Backend: A
+HTTP/1.1 200 OK X-Backend: B
+HTTP/1.1 200 OK X-Backend: A
+HTTP/1.1 200 OK X-Backend: B
+
+$ openssl s_client -connect 10.7.12.140:8443 -servername app.team1.test -CAfile config/tls/team1-ca.crt
+issuer=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=Team1 Local CA
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+subject=C=IN, ST=Maharashtra, L=Dombivli, O=Team1, CN=app.team1.test
+Verify return code: 0 (ok)
+
+$ curl -i http://10.7.12.140:3001/api/status   (Backend A still up)
+HTTP/1.1 200 OK
+X-Backend: A
+{"backend":"A","status":"ok"}
+
+$ tail /tmp/cn-nginx-standby-access.log
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "GET /api/status HTTP/1.1" 200 40 "-" "curl/8.7.1"
+10.7.12.140 - - [22/Nov/2026:21:22:10 +0530] "" 400 0 "-" "-"
+
+$ tail /tmp/cn-nginx-standby-error.log
+2026/11/22 21:22:08 [notice] 80670#0: OS: Darwin 27.2.0
+2026/11/22 21:22:08 [notice] 80670#0: hw.ncpu: 8
+2026/11/22 21:22:08 [notice] 80670#0: net.inet.tcp.sendspace: 131072
+2026/11/22 21:22:08 [notice] 80670#0: kern.ipc.somaxconn: 128
+2026/11/22 21:22:08 [notice] 80670#0: hw.cachelinesize: 128
+2026/11/22 21:22:08 [notice] 80670#0: getrlimit(RLIMIT_NOFILE): 1048576:9223372036854775807
+2026/11/22 21:22:08 [notice] 80671#0: start worker processes
+2026/11/22 21:22:08 [notice] 80671#0: start worker process 80672

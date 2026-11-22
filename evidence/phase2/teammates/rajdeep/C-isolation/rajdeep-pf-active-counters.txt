@@ -1,0 +1,30 @@
+Mon Nov 23 00:52:48 IST 2026
+=== PF STATUS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Enabled for 0 days 00:02:54           Debug: Urgent
+=== BACKEND A RULE COUNTERS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+@0 pass in quick on en0 inet proto tcp from 10.7.2.253 to 10.7.12.140 port = 3001 flags S/SA keep state
+  [ Owner : nil          Priority : 0     ]
+  [ Evaluations: 22305     Packets: 24        Bytes: 2055        States: 2     ]
+  [ Inserted: uid 0 pid 83391 ]
+@1 block drop in quick on en0 inet proto tcp from any to 10.7.12.140 port = 3001
+  [ Owner : nil          Priority : 0     ]
+  [ Evaluations: 9227      Packets: 9         Bytes: 576         States: 0     ]
+  [ Inserted: uid 0 pid 83391 ]
+=== BACKEND A STILL HEALTHY ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0  14023      0 --:--:-- --:--:-- --:--:-- 14500
+HTTP/1.1 200 OK
+X-Backend: A
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:22:48 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"A","status":"ok"}

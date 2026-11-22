@@ -1,0 +1,36 @@
+Mon Nov 23 00:41:25 IST 2026
+=== Backend B listener ===
+COMMAND   PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    57757 omvednagre   12u  IPv4 0x4ac23bdebfb627f4      0t0  TCP *:3002 (LISTEN)
+=== Local request ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   2078      0 --:--:-- --:--:-- --:--:--  2230
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:11:30 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}local_exit=0
+=== LAN request ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   1646      0 --:--:-- --:--:-- --:--:--  1705
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:11:30 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}lan_exit=0
+=== PF status ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled                              Debug: Urgent

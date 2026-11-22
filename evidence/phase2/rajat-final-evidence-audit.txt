@@ -1,0 +1,55 @@
+Mon Nov 23 01:21:25 IST 2026
+=== CURRENT GIT BRANCH ===
+phase2
+=== GIT STATUS ===
+ M README.md
+M  config/dnsmasq/primary.conf
+ M config/nginx/nginx.conf
+ M config/tls/server-ext.cnf
+ M docs/machine-inventory.md
+ M docs/topology.md
+?? docs/rajat-phase2-results.md
+?? evidence/phase2/
+=== PHASE 2 EVIDENCE FILES ===
+evidence/phase2/A-backup-dns/rajat-after-restore.txt
+evidence/phase2/A-backup-dns/rajat-before.txt
+evidence/phase2/A-backup-dns/rajat-primary-recheck-20261122-221959.txt
+evidence/phase2/B-ttl/rajat-primary-backup-20261122-233858.DkKyDh
+evidence/phase2/B-ttl/rajat-signal4a-20261122-234805.3KGrOH
+evidence/phase2/C-isolation/backend-b-recheck.txt
+evidence/phase2/C-isolation/direct-baseline-recovered.txt
+evidence/phase2/C-isolation/direct-before-firewall.txt
+evidence/phase2/C-isolation/rajat-backend-a-pf-active.txt
+evidence/phase2/C-isolation/rajat-backend-a-restored.txt
+evidence/phase2/C-isolation/rajat-backend-b-pf-active-retest.txt
+evidence/phase2/C-isolation/rajat-backend-b-pf-active.txt
+evidence/phase2/C-isolation/rajat-backend-b-restored.txt
+evidence/phase2/D-ha/rajat-a-stopped.txt
+evidence/phase2/D-ha/rajat-after-recovery.txt
+evidence/phase2/D-ha/rajat-before.txt
+evidence/phase2/E-edge/rajat-after-rollback.txt
+evidence/phase2/E-edge/rajat-cutover-dns-verified.txt
+evidence/phase2/E-edge/rajat-cutover-dns.txt
+evidence/phase2/E-edge/rajat-final-health.txt
+evidence/phase2/E-edge/rajat-prepare-20261122-233804.zWvCm2
+evidence/phase2/E-edge/rajat-remote-standby.txt
+evidence/phase2/E-edge/rajat-standby-20261122-212617.txt
+evidence/phase2/F-troubleshooting/rajat-backend-a-fault.txt
+evidence/phase2/F-troubleshooting/rajat-final-recovery.txt
+evidence/phase2/F-troubleshooting/rajat-healthy-baseline.txt
+evidence/phase2/F-troubleshooting/rajat-port-fault-diagnosis.txt
+evidence/phase2/network-baseline/README.md
+evidence/phase2/network-baseline/rajat-dns-diagnosis-20261122-212338.txt
+evidence/phase2/network-baseline/rajat-network-20261122-211850.txt
+evidence/phase2/network-baseline/rajat-normal-https-repeat-20261122-213536.txt
+evidence/phase2/network-baseline/rajat-preflight-20261122-211724.txt
+evidence/phase2/network-baseline/rajat-r3-20261122-212353.txt
+evidence/phase2/network-baseline/rajat-readiness-20261122-212600.txt
+evidence/phase2/network-baseline/rajat-system-dns-20261122-212852.txt
+evidence/phase2/network-baseline/rajat-system-dns-20261122-212909.txt
+evidence/phase2/network-baseline/rajat-system-dns-20261122-213623.txt
+evidence/phase2/rajat-final-evidence-audit.txt
+=== DOCUMENTATION FILES ===
+docs/machine-inventory.md
+docs/rajat-phase2-results.md
+docs/topology.md
