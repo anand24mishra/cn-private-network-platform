@@ -120,3 +120,9 @@ queries confirmed a 30-second advertised TTL at cutover and after rollback.
 Anand demonstrated caching and the TTL countdown on his temporary resolver,
 as relayed by Rajat. The test did not capture the cached IP transitioning
 from `10.7.2.253` to `10.7.12.140` after the authoritative DNS change.
+
+## Final integration outcome
+
+The earlier status tables and Signal 4 partial TTL result record the state at those checkpoints. Anand’s later isolated probe used cache port 5533 and upstream port 1053. The cache retained `10.7.12.140` with a decreasing TTL after the upstream switched to `10.7.2.253`, and eventually refreshed to `10.7.2.253`. **Extension B passed in the isolated follow-up.** [Cache change](../evidence/phase2/B-ttl/anand-final-cache-change-proof.txt) · [Expiry](../evidence/phase2/B-ttl/anand-cache-expiry-final-proof.txt)
+
+Anand’s raw [standby HTTPS](../evidence/phase2/E-edge/anand-standby-https.txt), [main edge restoration](../evidence/phase2/E-edge/anand-original-edge-restored.txt), and [client restoration](../evidence/phase2/E-edge/anand-client-restored.txt) logs are now integrated. Rajat’s separately [recorded final check](../evidence/phase2/final/rajat-all-services-restored.txt) shows both DNS servers restored and all four HTTP/HTTPS services healthy at 02:25:45 IST on 23 November. See the [final report](phase2-final-report.md) for all six extensions and the remaining PR #1 evidence gap.
