@@ -1,0 +1,34 @@
+Mon Nov 23 01:05:22 IST 2026
+=== FIREWALL STATUS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Enabled for 0 days 00:03:00           Debug: Urgent
+=== FIREWALL RULE COUNTERS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+@0 pass in quick on en0 inet proto tcp from 10.7.2.253 to 10.7.26.0 port = 3002 flags S/SA keep state
+  [ Owner : nil          Priority : 0     ]
+  [ Evaluations: 8533      Packets: 51        Bytes: 6619        States: 3     ]
+  [ Inserted: uid 0 pid 65971 ]
+@1 pass in quick on en0 inet proto tcp from 10.7.12.140 to 10.7.26.0 port = 3002 flags S/SA keep state
+  [ Owner : nil          Priority : 0     ]
+  [ Evaluations: 1885      Packets: 30        Bytes: 2274        States: 2     ]
+  [ Inserted: uid 0 pid 65971 ]
+@2 block drop in quick on en0 inet proto tcp from any to 10.7.26.0 port = 3002
+  [ Owner : nil          Priority : 0     ]
+  [ Evaluations: 1883      Packets: 15        Bytes: 960         States: 0     ]
+  [ Inserted: uid 0 pid 65971 ]
+=== LOCAL BACKEND HEALTH ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    29    0    29    0     0   2687      0 --:--:-- --:--:-- --:--:--  2900
+HTTP/1.1 200 OK
+X-Backend: B
+Content-Type: application/json
+Cache-Control: public, max-age=60
+Date: Sun, 22 Nov 2026 19:35:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"backend":"B","status":"ok"}

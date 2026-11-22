@@ -1,0 +1,24 @@
+Mon Nov 23 01:07:01 IST 2026
+=== CLEAR BACKEND B FIREWALL RULES ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+rules cleared
+flush_exit=0
+=== RELEASE PF ENABLE TOKEN ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+pf disabled
+release_exit=0
+=== PF STATUS AFTER ROLLBACK ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+Status: Disabled for 0 days 00:00:00          Debug: Urgent
+=== VERIFY EXPERIMENTAL RULES CLEARED ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+=== REGISTERED ANCHORS ===
+No ALTQ support in kernel
+ALTQ related functions disabled
+  com.apple/200.AirDrop
+  com.apple/250.ApplicationFirewall
+  com.apple/900.cn-phase2-b
