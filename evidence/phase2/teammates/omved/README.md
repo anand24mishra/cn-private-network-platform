@@ -25,8 +25,8 @@
 | `C-isolation/` | `omved-pf-enable-token.txt` | First PF enable token (kernel session handle) |
 | `C-isolation/` | `omved-pf-enable-token-final.txt` | Final PF enable token |
 | `C-isolation/` | `omved-pf-active-counters.txt` | PF state counters while isolation anchor `com.apple/900.cn-phase2-b` was active |
-| `C-isolation/` | `omved-backend-b-healthy.txt` | Backend B HTTP 200 (local + LAN) while PF isolation was active |
-| `C-isolation/` | `omved-pf-rollback.txt` | Rollback: rules cleared (`flush_exit=0`), PF disabled (`release_exit=0`), only Apple system anchors remain |
+| `C-isolation/` | `omved-backend-b-healthy.txt` | Backend B HTTP 200 on localhost and the LAN before isolation, with PF Disabled |
+| `C-isolation/` | `omved-pf-rollback.txt` | Rollback: rules cleared (`flush_exit=0`), PF disabled (`release_exit=0`). The experimental anchor name remains listed after its rules are cleared |
 | `D-ha/` | `omved-backend-b-before.txt` | HTTP 200 / `X-Backend: B` pre-outage baseline |
 | `F-troubleshooting/` | `omved-backend-b-restart.txt` | Backend B restart confirmation (`listening on 0.0.0.0:3002`) |
 | `F-troubleshooting/` | `omved-backend-b-restored.txt` | Backend B restored: node PID 13690 on `*:3002`; HTTP 200 on localhost and LAN at 02:19 IST 23 Nov |
@@ -49,7 +49,7 @@
 
 ## Rollback Verification (`omved-pf-rollback.txt`)
 
-The rollback log demonstrates all four required states:
+The rollback and follow-up health logs document four checks:
 
 1. ✅ **PF experimental rules cleared** — `rules cleared`, `flush_exit=0`
 2. ✅ **PF enable token released** — `pf disabled`, `release_exit=0`
@@ -62,6 +62,6 @@ The rollback log demonstrates all four required states:
 
 | Gap | Reason |
 |---|---|
-| HTTPS load-balancing | nginx ran on Rajat's node — see `evidence/phase2/E-edge/` |
-| TTL-switching (Signal 4a/4b) | Covered by Rajat's `evidence/phase2/B-ttl/` |
+| HTTPS load-balancing | Anand ran the main edge and Rajdeep ran the standby. See [edge migration evidence](../../E-edge/anand-standby-https.txt). |
+| Isolated TTL transition | See [Anand’s cache trace](../../B-ttl/anand-final-cache-change-proof.txt) and [Rajat’s upstream switch](../../B-ttl/rajat-final-switch-proof.txt). |
 | Backend A | Not Omved's node — Rajat's `D-ha/` covers it |
