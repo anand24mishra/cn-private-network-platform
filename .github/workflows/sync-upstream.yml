@@ -1,0 +1,32 @@
+# Keeps this fork (rajdeep-2004/cn-private-network-platform) up to date with
+# upstream anand24mishra/cn-private-network-platform. Runs every 6 hours and on demand.
+# Uses GitHub's "merge-upstream" API: fast-forwards when possible, otherwise creates
+# a merge commit. If a branch has conflicts, that branch's step fails and must be
+# synced by hand (git fetch upstream && git merge upstream/<branch>).
+name: Sync fork with upstream
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    # Only run in the fork, never in the upstream repository.
+    if: github.repository == 'rajdeep-2004/cn-private-network-platform'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        branch: [main, phase2]
+    steps:
+      - name: Merge upstream into ${{ matrix.branch }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/merge-upstream" \
+            -f branch="${{ matrix.branch }}" \
+            --jq '"\(.merge_type): \(.message)"'
