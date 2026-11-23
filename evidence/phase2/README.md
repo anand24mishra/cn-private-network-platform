@@ -1,5 +1,7 @@
 # Phase 2 evidence index
 
+Start with [Rajat’s contribution index](teammates/rajat/README.md) for his primary DNS, integration, and verification work.
+
 Dates are 22–23 November 2026, IST. Raw logs retain their recorded timestamps, including HTTP dates in GMT.
 
 | Extension | Producer and recording time | Evidence |

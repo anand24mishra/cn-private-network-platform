@@ -17,7 +17,7 @@ export APP_URL=https://app.team1.test:8443/api/status
 - [x] Checkpoint 0.3: `en0` IP is 10.7.2.253 (matches assignment)
 - [x] Evidence folders `evidence/phase2/{A..F}` and `~/cn-phase2-backups/` created
 - [x] N1: cert, CA and `team1-server.key` present; old `nginx.conf` backed up to `~/cn-phase2-backups/nginx.conf`
-- [x] N2: `config/nginx/nginx.conf` updated (new upstreams, listen 10.7.2.253:8443, passive failover, timeouts)
+- [x] N2: The shared [nginx config](../config/nginx/nginx.conf) defines the listener at `10.7.2.253:8443` and both upstreams. Explicit retry settings and timeouts are in the separate [Anand failover variant](../config/nginx/nginx-anand-failover.conf).
 - [x] `nginx -t` OK; nginx started on 10.7.2.253:8443
 - [x] `config/dnsmasq/cache-client.conf` created (TEST 4)
 - [ ] Waiting on others: Backend A (Rajdeep), Backend B (Omved), DNS (Rajat/Omved) — then run N4, tests below
@@ -171,4 +171,4 @@ curl -i http://10.7.26.0:3002/api/status
 - `evidence/phase2/E-edge/anand-nginx-main.txt` — `nginx -t` OK, listener on 10.7.2.253:8443, config
 - `evidence/phase2/D-ha/anand-backend-reach.txt` — backends NOT yet reachable (connection refused: services not started)
 - `evidence/phase2/F-fault/anand-edge-layers.txt` — TCP OK, TLS verify OK, HTTP 502 (nginx up, backends down)
-Still to record once others are ready: HA failover, backup DNS, TTL cache, HTTPS cutover, firewall (PF5), restore.
+This checklist reflects the rehearsal stage. See the [final evidence index](../evidence/phase2/README.md) for the subsequent HA, DNS failover, TTL, edge migration, firewall, and restoration results.
